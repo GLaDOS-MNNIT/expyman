@@ -35,7 +35,7 @@
   color: rgb(187, 237, 63);
 }
 .image {
-  background-image: url("./money.jpg");
+  background-image: url("../../assets/money.jpg");
   height: 400px;
 }
 .login {
