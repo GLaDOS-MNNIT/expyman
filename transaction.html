@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Table</title>
+    <link rel="stylesheet" href="transactionStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Transactions</h1>
+            <div class="buttons">
+                <button class="add-income">Add Income</button>
+                <button class="add-expense">Add Expense</button>
+            </div>
+        </div>
+        <div class="filters">
+            <select id="status" onchange="filter()">
+                <option value="All">Status: All</option>
+                <option value="completed">Completed</option>
+                <option value="Pending">Pending</option>
+            </select>
+            <select id="type" onchange="filter()">
+                <option value="All">Type: All</option>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select >
+            <select id="category" onchange="filter()">
+                <option value="All">Category: All</option>
+                <option value="Sales">Sales</option>
+                <option value="Uncat">Uncategorized Income</option>
+                <option value="Income">Income</option>
+                <option value="Expense">Expense</option>
+            </select>
+            <select id="account" onchange="filter()">
+                <option value="All">Account: All</option>
+                <option value="CashHand">Cash on Hand</option>
+                <option value="Savings">Savings</option>
+                <option value="CashManage">Cash Management</option>
+            </select>
+            <input type="date" id="from" onchange="filter()" placeholder="From">
+            <input type="date" id="to" onchange="filter()" placeholder="To">
+        </div>
+        <table id="transaction">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Category</th>
+                    <th>Account</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2016-11-22</td>
+                    <td>Enim nulla leo</td>
+                    <td>$230</td>
+                    <td>Uncategorized Income</td>
+                    <td>Savings</td>
+                    <td><span class="status-icon status-check"></span></td>
+                </tr>
+                <tr>
+                    <td>2016-11-17</td>
+                    <td>Leo nibh nec</td>
+                    <td>$452</td>
+                    <td>Sales</td>
+                    <td>Cash on Hand</td>
+                    <td><span class="status-icon status-check"></span></td>
+                </tr>
+                <tr>
+                    <td>2016-10-03</td>
+                    <td>Neque metus id rhoncus</td>
+                    <td>$740</td>
+                    <td>Sales</td>
+                    <td>Cash on Hand</td>
+                    <td><span class="status-icon status-cross"></span></td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+        <div class="pagination">
+            <a href="#">Previous</a>
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">Next</a>
+        </div>
+    </div>
+</body>
+</html>
